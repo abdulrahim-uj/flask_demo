@@ -8,4 +8,9 @@ def index():
     return render_template('index.html')
 
 
+@demo.route('/profile/<username>')
+def peofile(username):
+    return render_template('profile.html', username=username)
+
+
 demo.run(debug=True)
