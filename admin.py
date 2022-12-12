@@ -10,7 +10,7 @@ def index():
 
 @demo.route('/profile/<username>')
 def peofile(username):
-    return render_template('profile.html', username=username)
+    return render_template('profile.html', username=username, isActive=True)
 
 
 demo.run(debug=True)

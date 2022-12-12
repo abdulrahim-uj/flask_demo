@@ -5,6 +5,10 @@
     <title>Username</title>
 </head>
 <body>
-    <h3>My name is {{username}}</h3>
+    {% if isActive %}
+    <h3>My name is {{username}} -- {{isActive}}</h3>
+    {% else %}
+    <h2>The user is logged out</h2>
+    {% endif %}
 </body>
 </html>
