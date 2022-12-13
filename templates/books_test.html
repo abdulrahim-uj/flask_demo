@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <style>
+        div.gallery {
+            margin: 10px;
+            float: left;
+            width: 190px;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: 250px;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% if books %}
+        {% for book in books %}
+            <div class="gallery">
+                <img src="{{book.poster}}" alt="{{book.name}}" />
+                <div class="desc">{{book.name}} by {{book.author}}</div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
