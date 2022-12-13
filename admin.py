@@ -10,7 +10,13 @@ def index():
 
 @demo.route('/profile/<username>')
 def peofile(username):
-    return render_template('profile.html', username=username, isActive=True)
+    return render_template('profile.html', username=username, isActive=False)
+
+
+@demo.route('/books/')
+def book():
+    book_list = ['book A', 'book B', 'book C', 'book D', 'book E']
+    return render_template('books.html', books=book_list)
 
 
 demo.run(debug=True)

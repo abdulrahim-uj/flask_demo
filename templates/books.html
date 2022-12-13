@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+    {% if books %}
+        {% for book in books %}
+            <ul style="list-style: none">
+                <li style="display: inline-block; margin: 0 5px;">{{loop.index}}.</li>
+                <li style="display: inline-block; margin: 0 5px;">{{book}}</li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
